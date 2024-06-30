@@ -141,7 +141,10 @@ if 'retriever_tool' not in st.session_state:
 
 # 채팅 인터페이스
 st.title("일론머스크와의 채팅")
-
+st.write("해당 봇은 일론머스크의 TED TALK를 참고하여 답변합니다.")
+st.write("<참고한 인터뷰>")
+st.markdown("[Elon Musk: A future worth getting excited about](https://www.youtube.com/watch?v=YRvf00NooN8)")
+st.markdown("[Elon Musk talks Twitter, Tesla and how his brain works](https://www.youtube.com/watch?v=cdZZpaB2kDM&t=84s)")
 # 채팅 기록 표시
 for message in st.session_state.chat_history:
     with st.chat_message(message["role"]):
