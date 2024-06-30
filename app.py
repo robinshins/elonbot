@@ -97,7 +97,7 @@ def split_text_with_titles(docs, chunk_size=600, chunk_overlap=50):
     return chunks
 
 def initialize_vector_store():
-    vector_store_path = "faiss_store_realese.index"
+    vector_store_path = "faiss_store_realese2.index"
     if os.path.exists(vector_store_path):
         print("Loading vector store from file...")
         embeddings = OpenAIEmbeddings()
@@ -142,7 +142,7 @@ if 'retriever_tool' not in st.session_state:
 # 채팅 인터페이스
 st.title("일론머스크와의 채팅")
 st.write("해당 봇은 일론머스크의 TED TALK를 참고하여 답변합니다.")
-st.write("<참고한 인터뷰>")
+st.write("<참고한 인터뷰 - 아래 유튜브 2건 외에 인터뷰 모음집을 함께 참고합니다.>")
 st.markdown("[Elon Musk: A future worth getting excited about](https://www.youtube.com/watch?v=YRvf00NooN8)")
 st.markdown("[Elon Musk talks Twitter, Tesla and how his brain works](https://www.youtube.com/watch?v=cdZZpaB2kDM&t=84s)")
 # 채팅 기록 표시
