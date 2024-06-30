@@ -113,7 +113,7 @@ def initialize_vector_store():
         vector = FAISS.from_documents(chunks, embeddings)
         vector.save_local(vector_store_path)
 
-    elon_retriever = vector.as_retriever(search_kwargs={"k": 3})
+    elon_retriever = vector.as_retriever(search_kwargs={"k": 2})
 
     retriever_tool = create_retriever_tool(
         elon_retriever,
